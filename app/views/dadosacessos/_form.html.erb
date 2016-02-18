@@ -1,0 +1,29 @@
+<%= form_for(@dadosacesso) do |f| %>
+  <% if @dadosacesso.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dadosacesso.errors.count, "error") %> prohibited this dadosacesso from being saved:</h2>
+
+      <ul>
+      <% @dadosacesso.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :dac_data_acesso %><br>
+    <%= f.text_field :dac_data_acesso %>
+  </div>
+  <div class="field">
+    <%= f.label :dac_ip %><br>
+    <%= f.text_field :dac_ip %>
+  </div>
+  <div class="field">
+    <%= f.label :usuario_id %><br>
+    <%= f.text_field :usuario_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

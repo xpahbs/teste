@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dis status:</strong>
+  <%= @disciplina.dis_status %>
+</p>
+
+<p>
+  <strong>Dis nome:</strong>
+  <%= @disciplina.dis_nome %>
+</p>
+
+<p>
+  <strong>Dis imagem:</strong>
+  <%= @disciplina.dis_imagem %>
+</p>
+
+<%= link_to 'Edit', edit_disciplina_path(@disciplina) %> |
+<%= link_to 'Back', disciplinas_path %>

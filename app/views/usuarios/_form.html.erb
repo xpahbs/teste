@@ -1,0 +1,41 @@
+<%= form_for(@usuario) do |f| %>
+  <% if @usuario.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@usuario.errors.count, "error") %> prohibited this usuario from being saved:</h2>
+
+      <ul>
+      <% @usuario.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group form-group-sm">
+    <label for="nome">Nome</label>
+    <%= f.text_field :usr_nome, class: 'form-control', id: 'nome' %>
+  </div>
+  <div class="form-group form-group-sm">
+    <label for="cpf">CPF</label>
+    <%= f.text_field :usr_cpf, class: 'form-control', id: 'cpf' %>
+  </div>
+  <div class="form-group form-group-sm">
+    <label for="sexo">Sexo</label>
+    <%= f.text_field :usr_sexo, class: 'form-control', id: 'sexo' %>
+  </div>
+  <div class="form-group form-group-sm">
+    <label for="matricula">Matrícula</label>
+    <%= f.text_field :usr_matricula, class: 'form-control', id: 'matricula' %>
+  </div>
+  <div class="form-group form-group-sm">
+    <label for="senha">Senha</label>
+    <%= f.text_field :usr_senha, class: 'form-control', id: 'senha' %>
+  </div>
+  <div class="form-group form-group-sm">
+    <label for="tipo_usuario">Tipo Usuário</label>
+    <%= f.text_field :tipo_usuario_id, class: 'form-control', id: 'senha' %>
+  </div>
+  <div class="form-group form-group-sm">
+    <%= f.submit class: 'btn btn-primary' %>
+  </div>
+<% end %>

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Dadosacessos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dac data acesso</th>
+      <th>Dac ip</th>
+      <th>Usuario</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dadosacessos.each do |dadosacesso| %>
+      <tr>
+        <td><%= dadosacesso.dac_data_acesso %></td>
+        <td><%= dadosacesso.dac_ip %></td>
+        <td><%= dadosacesso.usuario %></td>
+        <td><%= link_to 'Show', dadosacesso %></td>
+        <td><%= link_to 'Edit', edit_dadosacesso_path(dadosacesso) %></td>
+        <td><%= link_to 'Destroy', dadosacesso, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dadosacesso', new_dadosacesso_path %>

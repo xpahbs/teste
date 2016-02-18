@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <% if notice %>
+            <div class="alert alert-info" role="alert">
+              <p id="notice"><i class="glyphicon glyphicon-info-sign"></i> <%= notice %></p>
+            </div>
+        <% end %>
+        <p>
+          <strong>Status:</strong>
+          <% if @curso.cur_status == 1 %>
+              ATIVO
+          <% else %>
+              INATIVO
+          <% end %>
+        </p>
+        <p>
+          <strong>Nome:</strong>
+          <%= @curso.cur_nome %>
+        </p>
+
+        <p>
+          <strong>Tempo duração:</strong>
+          <%= @curso.cur_tempo_duracao %>
+        </p>
+
+        <p>
+          <strong>Data início:</strong>
+          <%= @curso.cur_data_inicio %>
+        </p>
+
+        <p>
+          <strong>Data término:</strong>
+          <%= @curso.cur_data_termino %>
+        </p>
+
+        <p>
+          <strong>Valor:</strong>
+          R$ <%= @curso.cur_valor %>
+        </p>
+
+        <%= link_to '<i class="glyphicon glyphicon-edit"></i> Editar'.html_safe, edit_curso_path(@curso), class: 'btn btn-sm btn-info' %>
+        <%= link_to '<i class="glyphicon glyphicon-th-list"></i> Todos'.html_safe, cursos_path, class: 'btn btn-sm btn-default' %>
+
+      </div>
+    </div>
+  </div>
+</div>

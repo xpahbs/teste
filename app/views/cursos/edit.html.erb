@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h3>Atualizar Curso</h3>
+        <hr>
+        <%= render 'form' %>
+
+        <%= link_to '<i class="glyphicon glyphicon-eye-open"></i> Visualizar'.html_safe, @curso, class: 'btn btn-sm btn-warning' %>
+        <%= link_to '<i class="glyphicon glyphicon-th-list"></i> Todos'.html_safe, cursos_path, class: 'btn btn-sm btn-default' %>
+
+      </div>
+    </div>
+  </div>
+</div>

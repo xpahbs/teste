@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cur_status: 1
+  cur_nome: MyString
+  cur_tempo_duracao: 1
+  cur_data_inicio: 2016-02-14
+  cur_data_termino: 2016-02-14
+  cur_valor: 1.5
+
+two:
+  cur_status: 1
+  cur_nome: MyString
+  cur_tempo_duracao: 1
+  cur_data_inicio: 2016-02-14
+  cur_data_termino: 2016-02-14
+  cur_valor: 1.5

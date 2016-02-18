@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <p id="notice"><%= notice %></p>
+
+        <p>
+          <strong>Nome:</strong>
+          <%= @usuario.usr_nome %>
+        </p>
+
+        <p>
+          <strong>CPF:</strong>
+          <%= @usuario.usr_cpf %>
+        </p>
+
+        <p>
+          <strong>Sexo:</strong>
+          <%= @usuario.usr_sexo %>
+        </p>
+
+        <p>
+          <strong>Matrícula:</strong>
+          <%= @usuario.usr_matricula %>
+        </p>
+
+        <p>
+          <strong>Senha:</strong>
+          <%= @usuario.usr_senha %>
+        </p>
+
+        <p>
+          <strong>Tipo de usuário:</strong>
+          <%= @usuario.tipo_usuario_id %>
+        </p>
+
+        <%= link_to '<i class="glyphicon glyphicon-edit"></i>'.html_safe, edit_usuario_path(@usuario), class: 'btn btn-sm btn-info' %>
+        <%= link_to '<i class="glyphicon glyphicon-th-list"></i>'.html_safe, usuarios_path, class: 'btn btn-sm btn-warning' %>
+
+      </div>
+    </div>
+  </div>
+</div>

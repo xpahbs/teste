@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vid_titulo: MyString
+  vid_descricao: MyString
+  vid_link: MyString
+  disciplina_id: 
+
+two:
+  vid_titulo: MyString
+  vid_descricao: MyString
+  vid_link: MyString
+  disciplina_id: 

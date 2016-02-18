@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Turmas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tur nome</th>
+      <th>Tur status</th>
+      <th>Tur vagas</th>
+      <th>Tur horario entrada</th>
+      <th>Tur horario saida</th>
+      <th>Curso</th>
+      <th>Escola</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @turmas.each do |turma| %>
+      <tr>
+        <td><%= turma.tur_nome %></td>
+        <td><%= turma.tur_status %></td>
+        <td><%= turma.tur_vagas %></td>
+        <td><%= turma.tur_horario_entrada %></td>
+        <td><%= turma.tur_horario_saida %></td>
+        <td><%= turma.curso %></td>
+        <td><%= turma.escola %></td>
+        <td><%= link_to 'Show', turma %></td>
+        <td><%= link_to 'Edit', edit_turma_path(turma) %></td>
+        <td><%= link_to 'Destroy', turma, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Turma', new_turma_path %>

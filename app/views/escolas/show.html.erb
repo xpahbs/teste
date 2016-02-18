@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Esc nome:</strong>
+  <%= @escola.esc_nome %>
+</p>
+
+<p>
+  <strong>Esc status:</strong>
+  <%= @escola.esc_status %>
+</p>
+
+<p>
+  <strong>Esc qre:</strong>
+  <%= @escola.esc_qre %>
+</p>
+
+<%= link_to 'Edit', edit_escola_path(@escola) %> |
+<%= link_to 'Back', escolas_path %>

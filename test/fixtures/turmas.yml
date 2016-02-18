@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tur_nome: MyString
+  tur_status: 1
+  tur_vagas: 1
+  tur_horario_entrada: 2016-02-14 22:48:48
+  tur_horario_saida: 2016-02-14 22:48:48
+  curso_id: 
+  escola_id: 
+
+two:
+  tur_nome: MyString
+  tur_status: 1
+  tur_vagas: 1
+  tur_horario_entrada: 2016-02-14 22:48:48
+  tur_horario_saida: 2016-02-14 22:48:48
+  curso_id: 
+  escola_id: 

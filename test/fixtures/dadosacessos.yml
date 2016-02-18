@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dac_data_acesso: 
+  dac_ip: MyString
+  usuario_id: 
+
+two:
+  dac_data_acesso: 
+  dac_ip: MyString
+  usuario_id: 

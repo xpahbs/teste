@@ -1,0 +1,33 @@
+<%= form_for(@video) do |f| %>
+  <% if @video.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@video.errors.count, "error") %> prohibited this video from being saved:</h2>
+
+      <ul>
+      <% @video.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group form-group-sm">
+    <label for="titulo">Título do Vídeo</label>
+    <%= f.text_field :vid_titulo, class: 'form-control', id: 'titulo' %>
+  </div>
+  <div class="form-group form-group-sm">
+    <label for="descricao">Descrição do vídeo</label>
+    <%= f.text_field :vid_descricao, class: 'form-control', id: 'descricao' %>
+  </div>
+  <div class="form-group form-group-sm">
+    <label for="link">Link do vídeo</label>
+    <%= f.text_field :vid_link, class: 'form-control', id: 'link' %>
+  </div>
+  <div class="form-group form-group-sm">
+    <label for="disciplina">Disciplina do Vídeo</label>
+    <%= f.text_field :disciplina_id, class: 'form-control', id: 'disciplina' %>
+  </div>
+  <div class="form-group">
+    <%= f.submit 'Cadastrar', class: 'btn btn-sm btn-primary' %>
+  </div>
+<% end %>

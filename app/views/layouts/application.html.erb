@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prototipo</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="tudo">
+  <div class="cabecalho">
+    <div class="container-fluid">
+      <div class="row logo_top">
+        <div class="col-lg-4"><%= image_tag("logo.png") %></div>
+        <div class="col-lg-4 col-lg-offset-4">
+          <blockquote>É no problema da educação que assenta o grande segredo do aperfeiçoamento da humanidade.</blockquote>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to '<i class="glyphicon glyphicon-education"></i> Aluno'.html_safe, controller: 'home', action: 'loginAluno' %></li>
+            <li><%= link_to '<i class="glyphicon glyphicon-user"></i> Docente'.html_safe, controller: 'home', action: 'loginDocente' %></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+  </div>
+  <div class="conteudo">
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
+  </div>
+  <div class="rodape">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-4">
+          <p>&copy; 2016 Desenvolvido por Paulo Henrique</p>
+        </div>
+        <div class="col-lg-8 text-right">
+          <ul>
+            <li><%= link_to 'SEDUC', "http://www.seduc.pi.gov.br/", :target => "_blank" %></li>
+            <li><%= link_to 'INSTITUTO PREMIUM' %></li>
+            <li><%= link_to 'CANAL EDUCAÇÃO', "http://www.canaleducacao.tv/", :target => "_blank" %></li>
+            <li><%= link_to 'GOVERNO PIAUI', "http://www.piaui.pi.gov.br/", :target => "_blank" %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

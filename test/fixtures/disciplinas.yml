@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dis_status: 1
+  dis_nome: MyString
+  dis_imagem: MyString
+
+two:
+  dis_status: 1
+  dis_nome: MyString
+  dis_imagem: MyString

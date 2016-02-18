@@ -1,0 +1,25 @@
+<%= form_for(@tipo_usuario) do |f| %>
+    <% if @tipo_usuario.errors.any? %>
+        <div role="alert" class="alert alert-info" id="error_explanation">
+          <h2><%= pluralize(@tipo_usuario.errors.count, "error") %> prohibited this tipo_usuario from being saved:</h2>
+
+          <ul>
+            <% @tipo_usuario.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="form-group">
+      <label for="tipo_usuario_tpu_nome">Tipo Usuário</label>
+      <%= f.text_field :tpu_nome, class: 'form-control input-sm' %>
+    </div>
+    <div class="form-group">
+      <label for="tipo_usuario_tpu_status">Status</label>
+      <%= f.number_field :tpu_status, class: 'form-control input-sm' %>
+    </div>
+    <div class="form-group">
+      <%= f.submit 'Cadastrar', class: 'btn btn-sm btn-primary' %>
+    </div>
+<% end %>

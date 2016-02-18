@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tur nome:</strong>
+  <%= @turma.tur_nome %>
+</p>
+
+<p>
+  <strong>Tur status:</strong>
+  <%= @turma.tur_status %>
+</p>
+
+<p>
+  <strong>Tur vagas:</strong>
+  <%= @turma.tur_vagas %>
+</p>
+
+<p>
+  <strong>Tur horario entrada:</strong>
+  <%= @turma.tur_horario_entrada %>
+</p>
+
+<p>
+  <strong>Tur horario saida:</strong>
+  <%= @turma.tur_horario_saida %>
+</p>
+
+<p>
+  <strong>Curso:</strong>
+  <%= @turma.curso %>
+</p>
+
+<p>
+  <strong>Escola:</strong>
+  <%= @turma.escola %>
+</p>
+
+<%= link_to 'Edit', edit_turma_path(@turma) %> |
+<%= link_to 'Back', turmas_path %>

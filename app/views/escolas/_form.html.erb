@@ -1,0 +1,29 @@
+<%= form_for(@escola) do |f| %>
+  <% if @escola.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@escola.errors.count, "error") %> prohibited this escola from being saved:</h2>
+
+      <ul>
+      <% @escola.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group form-group-sm">
+    <label for="nome">Nome Escola</label>
+    <%= f.text_field :esc_nome, class: 'form-control', id: 'nome' %>
+  </div>
+  <div class="form-group form-group-sm">
+    <label for="status">Status</label>
+    <%= f.number_field :esc_status, class: 'form-control', id: 'status' %>
+  </div>
+  <div class="form-group form-group-sm">
+    <label for="qre">QRE</label>
+    <%= f.text_field :esc_qre, class: 'form-control', id: 'qre' %>
+  </div>
+  <div class="form-group form-group-sm">
+    <%= f.submit 'Cadastrar', class: 'btn btn-sm btn-primary' %>
+  </div>
+<% end %>

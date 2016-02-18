@@ -1,0 +1,41 @@
+<%= form_for(@curso) do |f| %>
+  <% if @curso.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@curso.errors.count, "error") %> prohibited this curso from being saved:</h2>
+
+      <ul>
+      <% @curso.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <label for="status">Status</label>
+    <%= f.number_field :cur_status, class: 'form-control input-sm', id: 'status' %>
+  </div>
+  <div class="form-group">
+    <label for="nome">Nome</label>
+    <%= f.text_field :cur_nome, class: 'form-control input-sm', id: 'nome' %>
+  </div>
+  <div class="form-group">
+    <label for="tempo_duracao">Tempo Duração</label>
+    <%= f.number_field :cur_tempo_duracao, class: 'form-control input-sm', id: 'tempo_duracao' %>
+  </div>
+  <div class="form-group">
+    <label>Data Início</label><br>
+    <%= f.date_select :cur_data_inicio, class: 'form-control input-sm' %>
+  </div>
+  <div class="form-group">
+    <label>Data Término</label><br>
+    <%= f.date_select :cur_data_termino, class: 'form-control input-sm'%>
+  </div>
+  <div class="form-group">
+    <label>Valor</label><br>
+    <%= f.text_field :cur_valor, class: 'form-control input-sm'%>
+  </div>
+  <div class="form-group">
+    <%= f.submit 'Cadastrar', class: 'btn btn-sm btn-primary' %>
+  </div>
+<% end %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dac data acesso:</strong>
+  <%= @dadosacesso.dac_data_acesso %>
+</p>
+
+<p>
+  <strong>Dac ip:</strong>
+  <%= @dadosacesso.dac_ip %>
+</p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @dadosacesso.usuario %>
+</p>
+
+<%= link_to 'Edit', edit_dadosacesso_path(@dadosacesso) %> |
+<%= link_to 'Back', dadosacessos_path %>
